@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<div class="row d-flex justify-content-center align-items-center">
+  <!-- Image 1 -->
+  <div class="col-md-5 bg-light p-3 rounded">
+    <h2 class="mx-auto">Francais</h2>
+    <img class="rounded img-fluid" src="/quebec.svg" />
+  </div>
+
+  <div class="col-md-2"></div>
+
+  <!-- Image 2 -->
+  <div class="col-md-5 bg-light p-3 rounded">
+    <h2 class="mx-auto">English</h2>
+    <img class="rounded img-fluid" src="/canada.png" />
+  </div>
+</div>
+
+<br /><br />
+{{ .Content }} {{ end }}
