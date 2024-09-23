@@ -1,0 +1,26 @@
+body {
+    background-color: #232b2b;
+    color: #ffffff;
+}
+
+.bg-dark {
+    background-color: #36454f;
+}
+
+a {
+    color: #1e90ff; /* Link color (e.g., Dodger Blue) */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+a:visited {
+    color: #1e90ff; /* Visited link color (e.g., Dark Purple) */
+}
+
+a:hover {
+    color: #ff6347; /* Hover color (e.g., Tomato) */
+    text-decoration: underline; /* Optional: Underline on hover */
+}
+
+a:active {
+    color: #ff4500; /* Active link color (e.g., Orange Red) */
+}

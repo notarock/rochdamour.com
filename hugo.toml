@@ -13,12 +13,16 @@ pageRef = '/projects'
 weight = 20
 
 [[menus.main]]
+name = 'Lab Reports'
+pageRef = '/homelab'
+weight = 30
+
+[[menus.main]]
 name = 'Resume'
 pageRef = '/resume'
-weight = 30
+weight = 40
 
 [[menus.main]]
 name = 'Tags'
 pageRef = '/tags'
-weight = 30
-
+weight = 50

@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<div id="home-jumbotron" class="jumbotron text-center bg-dark">
+  <h1 class="title">Homelab Lab Reports</h1>
+  <p class="lead">
+    Notes, observations and thoughts gathered while working on my own cloud at
+    home.
+  </p>
+</div>
+
+<ul class="list-unstyled">
+  {{ range .Paginator.Pages }}
+  <a href="{{ .Permalink }}">
+    <li class="d-flex align-items-start mb-3 bg-dark p-3 rounded">
+      <div class="mr-3">
+        <span class="text-muted"> {{ .Date | dateFormat "Jan. 2006" }} </span>
+      </div>
+      <h5 class="mb-1">{{ .Title }}</h5>
+      <p class="ml-3 mb-0 text-truncate">{{ .Summary }}</p>
+    </li>
+  </a>
+  {{ end }}
+</ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {{ if .Paginator.HasPrev }}
+  <a href="{{ .Paginator.Prev.URL }}">Previous</a>
+  {{ end }} {{ if .Paginator.HasNext }}
+  <a href="{{ .Paginator.Next.URL }}">Next</a>
+  {{ end }}
+</div>
+
+{{ end }}

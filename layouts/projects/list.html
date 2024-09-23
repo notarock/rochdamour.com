@@ -1,11 +1,19 @@
 {{ define "main" }}
-<section>
-  {{ range .Paginator.Pages }}
-  <project>
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p>{{ .Summary }}</p>
-  </project>
-  {{ end }}
+<div id="home-jumbotron" class="jumbotron text-center bg-dark">
+  <h1 class="title">Projects</h1>
+  <p class="lead">A collection of projects I've worked on.</p>
+</div>
+
+<div class="container">
+  <div class="row d-flex">
+    {{ range .Paginator.Pages }}
+    <a href="{{ .Permalink }}" class="col-md-4 p-3 rounded bg-dark">
+      <h2 class="mx-auto">{{ .Title }}</h2>
+      <img class="rounded img-fluid" src="{{ .Params.image }}" />
+      <p>{{ .Summary }}</p>
+    </a>
+    {{ end }}
+  </div>
 
   <!-- Pagination links -->
   <div class="pagination">
@@ -15,5 +23,5 @@
     <a href="{{ .Paginator.Next.URL }}">Next</a>
     {{ end }}
   </div>
-</section>
+</div>
 {{ end }}
