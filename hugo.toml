@@ -21,8 +21,3 @@ weight = 30
 name = 'Resume'
 pageRef = '/resume'
 weight = 40
-
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 50
