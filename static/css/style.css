@@ -24,3 +24,9 @@ a:hover {
 a:active {
     color: #ff4500; /* Active link color (e.g., Orange Red) */
 }
+
+@media (min-width: 992px) {
+    .image-large {
+        width: 70%;
+    }
+}
