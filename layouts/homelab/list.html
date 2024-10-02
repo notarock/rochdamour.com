@@ -9,7 +9,7 @@
   {{ range .Paginator.Pages }}
   <a class="no-text-decoration" href="{{ .Permalink }}">
     <li
-      class="d-flex align-items-start mb-3 mybg-dark p-3 rounded text-white hover-border"
+      class="d-flex align-items-start mb-3 mybg-clickable p-3 rounded text-white hover-border"
     >
       <div class="mr-3">
         <span class="text-muted"> {{ .Date | dateFormat "Jan. 2006" }} </span>

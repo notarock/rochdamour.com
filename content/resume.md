@@ -2,4 +2,3 @@
 title: "Resume"
 layout: "resume"
 ---
-

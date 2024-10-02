@@ -25,6 +25,14 @@ a:active {
     color: #ff4500; /* Active link color (e.g., Orange Red) */
 }
 
+link-icon:hover {
+    color: #ff6347;
+}
+
+link-icon:active {
+    color: #ff6347;
+}
+
 @media (min-width: 992px) {
     .image-large {
         width: 70%;
@@ -60,4 +68,8 @@ a:active {
 .hover-border:hover {
     border: 1px solid #ff6347; /* Change the color as needed */
     text-decoration: none; /* Optional: Underline on hover */
+}
+
+.mybg-clickable {
+    background-color: #253037;
 }
