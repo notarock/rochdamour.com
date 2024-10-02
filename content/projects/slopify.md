@@ -33,7 +33,7 @@ attention of the average social media user just long enough for the video to
 
 Many content creators on Youtube promote running this kind of "Faceless" content
 machines. The idea is to create a faceless social media account and monetize it
-by generating an endless amount of content effortlressly. Howerver, these
+by generating an endless amount of content effortlessly. Howerver, these
 youtubers are often selling a dream and are making a significant profits
 promoting the very tools they recommends.
 
