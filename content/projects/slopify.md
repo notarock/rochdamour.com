@@ -22,7 +22,7 @@ or [That](https://www.youtube.com/shorts/W15L4nmEJDc) or [anything here](https:/
 
 If you are familiar with the [Dead Internet
 Theory](https://en.wikipedia.org/wiki/Dead_Internet_theory), this project was my
-personnal experiment to see how much effort is required to recreate the type of
+personal experiment to see how much effort is required to recreate the type of
 videos you see on social media. This trend has become so widespread that [Subway
 Surfer
 gameplay](https://knowyourmeme.com/memes/overstimulation-videos-sludge-content)
@@ -33,8 +33,8 @@ attention of the average social media user just long enough for the video to
 
 Many content creators on Youtube promote running this kind of "Faceless" content
 machines. The idea is to create a faceless social media account and monetize it
-by generating an endless amount of content effortlessly. Howerver, these
-youtubers are often selling a dream and are making a significant profits
+by generating an endless amount of content effortlessly. However, these
+Youtubers are often selling a dream and are making a significant profits
 promoting the very tools they recommends.
 
 This led me to wonder: How difficult (or easy) would it be to automate content
