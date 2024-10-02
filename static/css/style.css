@@ -1,6 +1,11 @@
 body {
     background-color: #151b1f;
     color: #ffffff;
+
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .mybg-dark {
