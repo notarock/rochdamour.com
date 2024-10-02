@@ -51,3 +51,13 @@ a:active {
     width: 100%; /* Ensure the div takes full width */
     box-sizing: border-box; /* Include padding and border in element's total width */
 }
+
+.hover-border {
+    border: 1px solid #1b2227; /* Change the color as needed */
+    text-decoration: none; /* Optional: Underline on hover */
+}
+
+.hover-border:hover {
+    border: 1px solid #ff6347; /* Change the color as needed */
+    text-decoration: none; /* Optional: Underline on hover */
+}
