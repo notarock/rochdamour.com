@@ -97,7 +97,7 @@ hierarchy of a Reddit comment thread. By limiting the depth to two, we only
 retrieve the title of the thread, the permalinked comment, and its replies.
 
 {{< note >}}
-Sady this stopped working recently. Oh well...
+Sadly this stopped working recently. Oh well...
 {{< /note >}}
 
 ``` go {class="table-responsive"}
