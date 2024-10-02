@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div id="home-jumbotron" class="jumbotron text-center bg-dark">
+<div id="home-jumbotron" class="jumbotron text-center mybg-dark">
   <h1 class="title">Homelab Lab Reports</h1>
   <p class="lead">Field notes from my homelab experiments and projects.</p>
 </div>
@@ -8,7 +8,7 @@
 <ul class="list-unstyled">
   {{ range .Paginator.Pages }}
   <a href="{{ .Permalink }}">
-    <li class="d-flex align-items-start mb-3 bg-dark p-3 rounded">
+    <li class="d-flex align-items-start mb-3 mybg-dark p-3 rounded">
       <div class="mr-3">
         <span class="text-muted"> {{ .Date | dateFormat "Jan. 2006" }} </span>
       </div>

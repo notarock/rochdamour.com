@@ -35,6 +35,9 @@
         };
 
         devShell =
-          pkgs.mkShell { buildInputs = [ pkgs.nixpkgs-fmt pkgs.hugo ]; };
+          pkgs.mkShell { 
+            buildInputs = [ pkgs.nixpkgs-fmt pkgs.hugo ];
+            shellHook = "hugo server --navigateToChanged --disableFastRender";
+          };
       });
 }

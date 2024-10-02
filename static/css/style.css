@@ -1,10 +1,10 @@
 body {
-    background-color: #232b2b;
+    background-color: #151b1f;
     color: #ffffff;
 }
 
-.bg-dark {
-    background-color: #36454f;
+.mybg-dark {
+    background-color: #1b2227;
 }
 
 a {
@@ -29,4 +29,25 @@ a:active {
     .image-large {
         width: 70%;
     }
+}
+
+.shortcodes-note {
+    background-color: #071c33;
+    padding: 1em;
+    border-radius: 4px;
+    margin: 1em 0;
+    /* font-weight: bold; */
+    font-style: italic;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.shortcodes-emphasis {
+    background-color: #101417; /* Background color */
+    padding: 1em; /* Add padding for spacing */
+    border-radius: 4px; /* Optional: add rounded corners */
+    margin: 1em 0; /* Optional: add margin for spacing between elements */
+    /* color: #ff6347; /\* Change this to your preferred text color *\/ */
+    width: 100%; /* Ensure the div takes full width */
+    box-sizing: border-box; /* Include padding and border in element's total width */
 }
