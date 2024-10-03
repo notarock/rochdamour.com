@@ -9,7 +9,7 @@ tags:
   - Go
   - Media
 ---
-## The idea
+## The Idea
 
 {{< note >}}
 I’ve decided against open-sourcing this project. There is already an abundance of low-effort content on the internet as it is...
@@ -26,20 +26,20 @@ personal experiment to see how much effort is required to recreate the type of
 videos you see on social media. This trend has become so widespread that [Subway
 Surfer
 gameplay](https://knowyourmeme.com/memes/overstimulation-videos-sludge-content)
-have even turned into a meme. The core concept is simple: pairing a random,
-visually engaging video—like a gameplay clip—with a voiceover to hold the
+has even turned into a meme. The core concept is simple: pairing a random,
+visually engaging video—like a gameplay clip—with a voice-over to hold the
 attention of the average social media user just long enough for the video to
 “perform” well in terms of engagement.
 
 Many content creators on Youtube promote running this kind of "Faceless" content
-machines. The idea is to create a faceless social media account and monetize it
+machine. The idea is to create a faceless social media account and monetize it
 by generating an endless amount of content effortlessly. However, these
-Youtubers are often selling a dream and are making a significant profits
-promoting the very tools they recommends.
+YouTubers are often selling a dream and are making a significant profit
+promoting the very tools they recommend.
 
 This led me to wonder: How difficult (or easy) would it be to automate content
 creation by repurposing Reddit comment threads and posting them on a faceless
-social media channel? With tools like ffmpeg, web scraping, and a few cloud
+social media channel? With tools like FFmpeg, web scraping, and a few cloud
 APIs, I could likely automate the entire process of creating and uploading
 videos to YouTube with minimal manual efforts.
 
@@ -77,7 +77,7 @@ With the boilerplate code out of the way, it was time to dive into the real stuf
 
 The goal here is to avoid worrying about sourcing content, right? Why bother
 creating anything original? (Just kidding, of course.) Instead, let's explore
-some copyright-free resources we can use and adapt to make them our own.
+any copyright-free resources we can use and adapt to make them our own.
 
 ### Reddit
 
@@ -97,7 +97,7 @@ hierarchy of a Reddit comment thread. By limiting the depth to two, we only
 retrieve the title of the thread, the permalinked comment, and its replies.
 
 {{< note >}}
-Sadly this stopped working recently. Oh well...
+Sadly, this stopped working recently. Oh well...
 {{< /note >}}
 
 ``` go {class="table-responsive"}
@@ -246,7 +246,7 @@ a timestamp for every word spoken in the video, along with their respective
 timestamps.
 
 From this information, we can build a [SRT
-File](https://www.speechpad.com/captions/srt) and have `ffmpeg` handle the
+File](https://www.speechpad.com/captions/srt) and have `ffmpeg` handled the
 captions on the video.
 
 ```go {class="table-responsive"}
@@ -348,7 +348,7 @@ quickly generate videos in just a few minutes. However, the GCP API endpoint for
 uploading videos to YouTube has a quota limitation, allowing only six uploads
 per day unless you contact them to request an upgrade.
 
-I *really* doubt my experiments would be considered valid enough to justify uploading a short every hour of the day.
+I *really* doubt my experiments would be considered valid enough to justify uploading shorts every hour of the day.
 
 ## Conclusion
 
@@ -360,7 +360,7 @@ potentially weaponize such software and take over the internet. Who knows, this
 might already be happening. I wouldn't be surprised at all.
 
 YouTube actually filters out low-effort content, so my videos never ended up
-getting recommended to anyone (phew!). Anyone looking to make actual money with
+getting recommended to anyone (phew!) Anyone looking to make actual money with
 this approach would need to invest more effort into the editing—my basic FFmpeg
 edits felt pretty bland compared to what you typically find on TikTok.
 
