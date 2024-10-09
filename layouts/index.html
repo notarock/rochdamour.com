@@ -1,8 +1,42 @@
 {{ define "main" }}
 <div id="home-jumbotron" class="jumbotron text-center mybg-dark">
   <h1 class="title">{{ .Site.Title }}</h1>
-  <p class="lead">
-    A website where I share my projects, thoughts and contact informations.
-  </p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <img
+        class="rounded-circle shadow"
+        width="200"
+        height="200"
+        src="https://media.licdn.com/dms/image/v2/D4E03AQF-X6mR2gTCfg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669770949044?e=1733961600&v=beta&t=cn1suuP2zWbZ1Y1FyQg24u4yoD-sGNM_qy9EuHja9y8"
+      />
+    </div>
+    <div class="col-md-9">
+      <p>Hello here.</p>
+      <p>
+        I'm Roch D'Amour, aka
+        <a href="https://github.com/notarock">notarock</a>. A Software Developer
+        from Quebec, Canada.
+      </p>
+      <p>
+        I'm passionate about open-source software and enjoy exploring new tools
+        and ideas, whether it's for work or personal side projects. This website
+        is where I share my experiences with automation, DevOps, and system
+        engineering. I also use this space to share the fun projects I work on
+        in my free time or discoveries I make while trying to host and maintain
+        services alive for myself.
+      </p>
+      <p>Hopefully, this summary doesn't sound <i>too cliche.</i></p>
+    </div>
+  </div>
+  <div class="row">
+    <p>
+      For now, the website is still under construction. I have a backlog of
+      content that I still need to get to! Feel free to check in from time to
+      time.
+    </p>
+  </div>
 </div>
 {{ end }}
