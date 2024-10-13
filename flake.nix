@@ -1,5 +1,5 @@
 {
-  description = "website hosted at notarock.lol";
+  description = "website hosted at rochdamour.com";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";

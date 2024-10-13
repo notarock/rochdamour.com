@@ -51,7 +51,7 @@ set up a repository and grant it read access. In my case, I’m using a reposito
 like this:
 
 
-{{< center-image src="/lab/01-introducing-argocd/gitops-config.png" alt="GitOps repository with notarock.lol folder containing deployment.yaml, ingress.yaml, kustomization.yaml, namespace.yaml and service.yaml"  >}}
+{{< center-image src="/lab/01-introducing-argocd/gitops-config.png" alt="GitOps repository with rochdamour.com folder containing deployment.yaml, ingress.yaml, kustomization.yaml, namespace.yaml and service.yaml"  >}}
 
 The `kustomization.yaml` file is pretty straightforward. Argo CD recognizes that
 this folder uses Kustomize and will automatically render the configuration for
@@ -85,11 +85,11 @@ the cluster. This can be plain Kubernetes manifests, a Helm chart, or a
 Kustomize bundle. From the Application menu, just select New App, connect the
 repository, specify the path to your configurations.
 
-{{< center-image src="/lab/01-introducing-argocd/application.png" alt="notarock.lol application shown in Argo CD UI"  >}}
+{{< center-image src="/lab/01-introducing-argocd/application.png" alt="rochdamour.com application shown in Argo CD UI"  >}}
 
 Clicking on an application in the list reveals all the components deployed as part of it. If anything goes wrong during a deployment, you’ll see the issue right there, making it easy to troubleshoot.
 
-{{< center-image src="/lab/01-introducing-argocd/application-details.png" alt="notarock.lol application shown in Argo CD UI"  >}}
+{{< center-image src="/lab/01-introducing-argocd/application-details.png" alt="rochdamour.com application shown in Argo CD UI"  >}}
 
 #### *Voila*
 
