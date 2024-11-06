@@ -77,3 +77,8 @@ link-icon:active {
 .mybg-clickable {
     background-color: #253037;
 }
+
+.project-image {
+    max-height: 400px;
+    height: 70%;
+}

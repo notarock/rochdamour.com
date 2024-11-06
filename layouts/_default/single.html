@@ -7,7 +7,9 @@
 </div>
 
 {{ if .Params.image }}
-<div class="row d-flex justify-content-center">
-  <img class="rounded img-fluid" src="{{ .Params.image }}" />
+<div class="row d-flex justify-content-center mx-auto">
+  <img class="rounded img-fluid project-image" src="{{ .Params.image }}" />
 </div>
-{{ end }} {{ .Content }} {{ end }}
+{{ end }}
+<div class="m-2">{{ .Content }}</div>
+{{ end }}
