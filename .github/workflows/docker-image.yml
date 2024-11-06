@@ -21,6 +21,8 @@ env:
 jobs:   
   build-and-push-image:
     runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.meta.outputs.tags }}
     permissions:
       contents: read
       packages: write
@@ -53,6 +55,9 @@ jobs:
   rolling-deployment:
     needs: [build-and-push-image]
     runs-on: ubuntu-latest
+    env: 
+      TAG: ${{needs.build-and-push-image.outputs.tag}}
+
     steps:
     - uses: actions/checkout@master
       with:
@@ -63,7 +68,8 @@ jobs:
         
     - name: Create local changes
       run: |
-        sed -E -r "s|(ghcr.io.*):.*$|\1:${{ steps.meta.outputs.tags }}|" rochdamour.com/deployment.yaml
+        set -x
+        sed -E -i "s|(ghcr.io.*):.*$|\1:$TAG|" rochdamour.com/deployment.yaml
         git diff
         
     - name: Commit & Push changes
@@ -71,4 +77,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITOPS_TOKEN }}
         # repository: 'notarock/gitops'
-        message: 'chore: autopublish rochdamour.com:${{ steps.meta.outputs.tags }}'
+        message: 'chore: autopublish rochdamour.com:$TAG'
