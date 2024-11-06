@@ -51,6 +51,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           
   rolling-deployment:
+    needs: [build-and-push-image]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -58,6 +59,8 @@ jobs:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
         fetch-depth: 0             # otherwise, you will fail to push refs to dest repo
         token: ${{ secrets.GITOPS_TOKEN }}
+        repository: "notarock/gitops"
+        
     - name: Create local changes
       run: |
         sed -E "s|(ghcr.io.*):.*$|\1:${{ steps.meta.outputs.tags }}|" rochdamour.com/deployment.yaml > rochdamour.com/deployment.yaml
