@@ -2,7 +2,7 @@
 title: 'Slopify'
 date: 2024-09-20
 draft: false
-summary: 'Automagically create brainrot short-form content from reddit comment.'
+summary: 'Automated video-montage based on a reddit comment thread.'
 params:
   image: '/projects/slopify/cover.png'
 tags:
