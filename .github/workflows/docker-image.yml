@@ -67,13 +67,17 @@ jobs:
         repository: "notarock/gitops"
         
     - name: Create local changes
+      id: update
       run: |
-        sed -E -i "s|(ghcr.io.*):.*$|\1:$TAG|g" rochdamour.com/deployment.yaml
+        set -x
+        image_tag=$(echo "$TAG}" | cut -d',' -f1 | xargs)
+        sed -i -E "s|ghcr.io.*$|${image_tag}|" rochdamour.com/deployment.yaml
         git diff
+        echo "image_tag=${image_tag}" >> "$GITHUB_OUTPUT"
         
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
         github_token: ${{ secrets.GITOPS_TOKEN }}
         repository: 'notarock/gitops'
-        message: 'chore: autopublish rochdamour.com:$TAG'
+        message: 'chore: autopublish ${{ steps.update.outputs.image_tag }}'
