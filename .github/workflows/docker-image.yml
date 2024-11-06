@@ -76,6 +76,7 @@ jobs:
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
+        coauthor_name: ${{ github.actor }}
         github_token: ${{ secrets.GITOPS_TOKEN }}
         repository: 'notarock/gitops'
-        message: "chore: autopublish rochdamour.com $VERSION"
+        message: "chore: autopublish rochdamour.com ${{needs.build-and-push-image.outputs.version}}"
