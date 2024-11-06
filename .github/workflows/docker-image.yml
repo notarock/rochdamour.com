@@ -72,7 +72,7 @@ jobs:
       id: update
       run: |
         set -x
-        sed -e -i "s|(ghcr.io.*):.*$|\1:$VERSION|g" rochdamour.com/deployment.yaml
+        sed -i -E "s|(ghcr.io.*):.*$|\1:$VERSION|" rochdamour.com/deployment.yaml
         git diff
         
     - name: Commit & Push changes
