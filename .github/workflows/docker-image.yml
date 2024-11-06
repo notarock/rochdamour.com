@@ -18,7 +18,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
-jobs:
+jobs:   
   build-and-push-image:
     runs-on: ubuntu-latest
     permissions:
@@ -49,3 +49,21 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          
+  rolling-deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0             # otherwise, you will fail to push refs to dest repo
+        token: ${{ secrets.GITOPS_TOKEN }}
+    - name: Create local changes
+      run: |
+        sed -E "s|(ghcr.io.*):.*$|\1:${{ steps.meta.outputs.tags }}|" rochdamour.com/deployment.yaml > rochdamour.com/deployment.yaml
+        git diff
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITOPS_TOKEN }}
+        message: 'chore: autopublish rochdamour.com:${{ steps.meta.outputs.tags }}'
