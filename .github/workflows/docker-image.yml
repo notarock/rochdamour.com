@@ -63,10 +63,12 @@ jobs:
         
     - name: Create local changes
       run: |
-        sed -E "s|(ghcr.io.*):.*$|\1:${{ steps.meta.outputs.tags }}|" rochdamour.com/deployment.yaml > rochdamour.com/deployment.yaml
+        sed -E -r "s|(ghcr.io.*):.*$|\1:${{ steps.meta.outputs.tags }}|" rochdamour.com/deployment.yaml
         git diff
+        
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
         github_token: ${{ secrets.GITOPS_TOKEN }}
+        # repository: 'notarock/gitops'
         message: 'chore: autopublish rochdamour.com:${{ steps.meta.outputs.tags }}'
