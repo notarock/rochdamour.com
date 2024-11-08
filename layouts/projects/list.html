@@ -4,15 +4,16 @@
 </div>
 
 <div class="container">
-  <div class="row d-flex">
+  <div class="row d-flex gx-3">
     {{ range .Paginator.Pages }}
-    <a
-      href="{{ .Permalink }}"
-      class="col-md-4 p-3 mr-4 rounded mybg-clickable text-white project-card hover-border"
-    >
-      <h2 class="mx-auto">{{ .Title }}</h2>
-      <img class="rounded img-fluid" src="{{ .Params.image }}" />
-      <p>{{ .Summary }}</p>
+    <a href="{{ .Permalink }}" class="col-md-4">
+      <div
+        class="p-3 rounded mybg-clickable text-white project-card hover-border"
+      >
+        <h2 class="mx-auto">{{ .Title }}</h2>
+        <img class="rounded img-fluid" src="{{ .Params.image }}" />
+        <p>{{ .Summary }}</p>
+      </div>
     </a>
     {{ end }}
   </div>
