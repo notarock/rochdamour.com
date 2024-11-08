@@ -1,5 +1,5 @@
 ---
-title: 'Doing something about my CD situation'
+title: 'Doing something about my CD situation - 1'
 date: 2024-10-02
 draft: false
 summary: '"The cobbler always wears the worst shoes"'
