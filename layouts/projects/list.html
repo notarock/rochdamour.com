@@ -6,7 +6,11 @@
 <div class="container">
   <div class="row d-flex gx-3">
     {{ range .Paginator.Pages }}
-    <a href="{{ .Permalink }}" class="col-md-4">
+    <a
+      href="{{ .Permalink }}"
+      data-umami-event="project:{{ .Title }}"
+      class="col-md-4"
+    >
       <div
         class="p-3 rounded mybg-clickable text-white project-card hover-border"
       >

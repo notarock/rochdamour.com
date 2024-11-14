@@ -6,7 +6,11 @@
 
 <ul class="list-unstyled">
   {{ range .Paginator.Pages }}
-  <a class="no-text-decoration" href="{{ .Permalink }}">
+  <a
+    class="no-text-decoration"
+    data-umami-event="lab:{{ .Title }}"
+    href="{{ .Permalink }}"
+  >
     <li
       class="d-flex align-items-start mb-3 mybg-clickable p-3 rounded text-white hover-border"
     >

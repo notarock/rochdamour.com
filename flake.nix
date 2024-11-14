@@ -34,10 +34,10 @@
           default = hugo;
         };
 
-        devShell =
-          pkgs.mkShell { 
-            buildInputs = [ pkgs.nixpkgs-fmt pkgs.hugo pkgs.nodePackages_latest.cspell ];
-            shellHook = "hugo server --navigateToChanged --disableFastRender";
-          };
+        devShell = pkgs.mkShell {
+          buildInputs =
+            [ pkgs.nixpkgs-fmt pkgs.hugo pkgs.nodePackages_latest.cspell ];
+          shellHook = "hugo server --navigateToChanged --disableFastRender";
+        };
       });
 }
