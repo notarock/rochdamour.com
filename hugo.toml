@@ -1,6 +1,6 @@
 baseURL = 'https://rochdamour.com/'
 languageCode = 'en-ca'
-title = "Roch D'amour's"
+title = "Roch D'amour's site"
 
 [[menus.main]]
 name = 'Home'
