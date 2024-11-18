@@ -44,6 +44,9 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
+      - name: Replace analytics ID
+        run: sed -i -E "s|__UMAMI_ID__|${{ secrets.UMAMI_ID }}|" layouts/partials/head.html && git diff
+
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
