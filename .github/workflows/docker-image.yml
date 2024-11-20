@@ -15,7 +15,7 @@ on:
       - "*"
 
 env:
-  UMAMI_ID: ${{ secret.UMAMI_ID }}
+  UMAMI_ID: ${{ secrets.UMAMI_ID }}
 
 jobs:   
   release:
