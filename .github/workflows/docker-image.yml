@@ -19,6 +19,9 @@ env:
 
 jobs:   
   release:
+    permissions:
+      contents: read
+      packages: write
     uses: notarock/tuyauterie/.github/workflows/ImageAutoRelease.yml@main
     with:
       EXTRA_COMMAND: |
