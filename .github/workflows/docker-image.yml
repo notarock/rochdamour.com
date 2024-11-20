@@ -15,15 +15,14 @@ on:
       - "*"
 
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  UMAMI_ID: ${{ secret.UMAMI_ID }}
 
 jobs:   
   release:
     uses: notarock/tuyauterie/.github/workflows/ImageAutoRelease.yml@main
     with:
       EXTRA_COMMAND: |
-        sed -i -E "s|__UMAMI_ID__|${{ secrets.UMAMI_ID }}|" layouts/partials/head.html && git diff
+        sed -i -E "s|__UMAMI_ID__|${{ env.UMAMI_ID }}|" layouts/partials/head.html && git diff
     secrets:
       REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
