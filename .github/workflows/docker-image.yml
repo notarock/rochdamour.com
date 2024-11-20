@@ -22,7 +22,7 @@ jobs:
     uses: notarock/tuyauterie/.github/workflows/ImageAutoRelease.yml@main
     with:
       EXTRA_COMMAND: |
-        sed -i -E "s|__UMAMI_ID__|${{ env.EXTRA_COMMAND_SECRET }}|" layouts/partials/head.html && git diff
+        sed -i -E "s|__UMAMI_ID__|$EXTRA_COMMAND_SECRET|" layouts/partials/head.html && git diff
     secrets:
       REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       EXTRA_COMMAND_SECRET: ${{ secrets.UMAMI_ID }}
