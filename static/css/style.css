@@ -82,3 +82,14 @@ link-icon:active {
     max-height: 400px;
     height: 70%;
 }
+
+.project-card:hover {
+    transform: scale(1.01);
+}
+
+.project-thumbnail {
+    max-height: 300px;
+    width: 100%; /* Ensures the image takes full width of its column */
+    object-fit: cover; /* Maintains aspect ratio and crops if necessary */
+    border-radius: 8px; /* Optional: to match your design's rounded corners */
+}

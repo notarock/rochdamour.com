@@ -15,4 +15,3 @@ In object-oriented programming, the command pattern is a behavioral design patte
 {{< /emphasis >}}
 
 
-

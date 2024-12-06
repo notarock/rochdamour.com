@@ -9,20 +9,39 @@
     <a
       href="{{ .Permalink }}"
       data-umami-event="project:{{ .Title }}"
-      class="col-md-12"
+      class="col-12 py-1"
     >
-      <div
-        class="p-3 rounded mybg-clickable text-white project-card hover-border"
-      >
-        <img class="rounded img-fluid" src="{{ .Params.image }}" />
-        <div>
-          <h2 class="mx-auto">{{ .Title }}</h2>
+      <div class="row p-3 rounded mybg-clickable text-white project-card hover-border">
+        <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+          <img
+            class="rounded img-fluid project-thumbnail"
+            src="{{ .Params.image }}"
+            alt="{{ .Title }}"
+            style="max-width: 100%; height: auto;"
+          />
+        </div>
+        <div class="col-12 col-md-7 d-flex flex-column justify-content-center mt-3 mt-md-0">
+          <h2 class="mb-2">{{ .Title }}</h2>
           <p>{{ .Summary }}</p>
+        </div>
+        <div class="col-12 col-md-2 d-flex flex-column justify-content-center mt-3 mt-md-0">
+          <ul class="text-muted list-unstyled">
+            {{ with .Params.tags }}
+            {{ range . }}
+            {{ $href := print (absURL "tags/") (urlize .) }}
+            <li class="d-flex align-items-center mb-2">
+              <i class="m-1 p-1" data-feather="tag"></i>
+              {{ . }}
+            </li>
+            {{ end }}
+            {{ end }}
+          </ul>
         </div>
       </div>
     </a>
     {{ end }}
   </div>
+</div>
 
   <!-- Pagination links -->
   <div class="pagination">
