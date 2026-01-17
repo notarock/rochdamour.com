@@ -7,12 +7,14 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    <header>{{ partial "header.html" . }}</header>
-    <main>
-      <div class="container">{{ block "main" . }}{{ end }}</div>
-    </main>
-    <footer class="container">
-      {{ partial "footer.html" . }} {{ partial "script.html" . }}
-    </footer>
+    <div class="page-wrapper">
+      <header>{{ partial "header.html" . }}</header>
+      <main>
+        <div class="container">{{ block "main" . }}{{ end }}</div>
+      </main>
+      <footer class="container">
+        {{ partial "footer.html" . }} {{ partial "script.html" . }}
+      </footer>
+    </div>
   </body>
 </html>

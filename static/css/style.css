@@ -1,32 +1,86 @@
 body {
-    background-color: #151b1f;
+    background-color: #080101;
     color: #ffffff;
 
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 300;
     font-style: normal;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-shrink: 0;
+}
+
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+    border-left: 3px solid #120905;
+    border-right: 3px solid #120905;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+main .container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mini-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.dancing-text {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#nav .nav-link {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .mybg-dark {
-    background-color: #1b2227;
+    background-color: #120905;
 }
 
 a {
-    color: #1e90ff; /* Link color (e.g., Dodger Blue) */
+    color: #ff4500; /* Link color (e.g., Dodger Blue) */
     text-decoration: none; /* Optional: Remove underline */
 }
 
 a:visited {
-    color: #1e90ff; /* Visited link color (e.g., Dark Purple) */
+    color: #ff4500; /* Visited link color (e.g., Dark Purple) */
 }
 
 a:hover {
-    color: #ff6347; /* Hover color (e.g., Tomato) */
+    color: #FFC300; /* Hover color (e.g., Tomato) */
     text-decoration: none; /* Optional: Underline on hover */
 }
 
 a:active {
-    color: #ff4500; /* Active link color (e.g., Orange Red) */
+    color: #FFC300; /* Active link color (e.g., Orange Red) */
 }
 
 link-icon:hover {
@@ -44,7 +98,7 @@ link-icon:active {
 }
 
 .shortcodes-note {
-    background-color: #071c33;
+    background-color: #300C0C;
     padding: 1em;
     border-radius: 4px;
     margin: 1em 0;
@@ -55,7 +109,7 @@ link-icon:active {
 }
 
 .shortcodes-emphasis {
-    background-color: #101417; /* Background color */
+    background-color: #150500; /* Background color */
     padding: 1em; /* Add padding for spacing */
     border-radius: 4px; /* Optional: add rounded corners */
     margin: 1em 0; /* Optional: add margin for spacing between elements */
@@ -65,17 +119,17 @@ link-icon:active {
 }
 
 .hover-border {
-    border: 1px solid #1b2227; /* Change the color as needed */
+    border: 1px solid #ff4500; /* Change the color */
     text-decoration: none; /* Optional: Underline on hover */
 }
 
 .hover-border:hover {
-    border: 1px solid #ff6347; /* Change the color as needed */
+    border: 1px solid #FFC300; /* Change the color */
     text-decoration: none; /* Optional: Underline on hover */
 }
 
 .mybg-clickable {
-    background-color: #253037;
+    background-color: #120905;
 }
 
 .project-image {
@@ -91,5 +145,5 @@ link-icon:active {
     max-height: 300px;
     width: 100%; /* Ensures the image takes full width of its column */
     object-fit: cover; /* Maintains aspect ratio and crops if necessary */
-    border-radius: 8px; /* Optional: to match your design's rounded corners */
+    border-radius: 8px;
 }
