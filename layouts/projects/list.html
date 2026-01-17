@@ -21,7 +21,11 @@
         </div>
         <div class="col-12 col-md-7 d-flex flex-column justify-content-center mt-3 mt-md-0">
           <h2 class="mb-2">{{ .Title }}</h2>
-          <p>{{ .Summary }}</p>
+          <p class="mb-2">{{ .Summary }}</p>
+          <p class="text-muted small mb-0">
+            <i class="me-1" data-feather="calendar" style="width: 14px; height: 14px;"></i>
+            {{ .PublishDate.Format "Jan 2, 2006" }}
+          </p>
         </div>
         <div class="col-12 col-md-2 d-flex flex-column justify-content-center mt-3 mt-md-0">
           <ul class="text-muted list-unstyled">
