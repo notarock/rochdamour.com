@@ -1,5 +1,5 @@
 body {
-    background-color: #080101;
+    background-color: #0b0503;
     color: #ffffff;
 
     font-family: "IBM Plex Sans", sans-serif;
@@ -17,6 +17,7 @@ header {
 }
 
 .page-wrapper {
+    background-color: #0c0503;
     flex: 1;
     display: flex;
     flex-direction: column;
