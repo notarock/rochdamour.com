@@ -1,0 +1,150 @@
+body {
+    background-color: #0b0503;
+    color: #ffffff;
+
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-shrink: 0;
+}
+
+.page-wrapper {
+    background-color: #0c0503;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    border-left: 3px solid #120905;
+    border-right: 3px solid #120905;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+main .container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mini-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.dancing-text {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#nav .nav-link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mybg-dark {
+    background-color: #120905;
+}
+
+a {
+    color: #ff4500; /* Link color (e.g., Dodger Blue) */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+a:visited {
+    color: #ff4500; /* Visited link color (e.g., Dark Purple) */
+}
+
+a:hover {
+    color: #FFC300; /* Hover color (e.g., Tomato) */
+    text-decoration: none; /* Optional: Underline on hover */
+}
+
+a:active {
+    color: #FFC300; /* Active link color (e.g., Orange Red) */
+}
+
+link-icon:hover {
+    color: #ff6347;
+}
+
+link-icon:active {
+    color: #ff6347;
+}
+
+@media (min-width: 992px) {
+    .image-large {
+        width: 70%;
+    }
+}
+
+.shortcodes-note {
+    background-color: #300C0C;
+    padding: 1em;
+    border-radius: 4px;
+    margin: 1em 0;
+    /* font-weight: bold; */
+    font-style: italic;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.shortcodes-emphasis {
+    background-color: #150500; /* Background color */
+    padding: 1em; /* Add padding for spacing */
+    border-radius: 4px; /* Optional: add rounded corners */
+    margin: 1em 0; /* Optional: add margin for spacing between elements */
+    /* color: #ff6347; /\* Change this to your preferred text color *\/ */
+    width: 100%; /* Ensure the div takes full width */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.hover-border {
+    border: 1px solid #ff4500; /* Change the color */
+    text-decoration: none; /* Optional: Underline on hover */
+}
+
+.hover-border:hover {
+    border: 1px solid #FFC300; /* Change the color */
+    text-decoration: none; /* Optional: Underline on hover */
+}
+
+.mybg-clickable {
+    background-color: #120905;
+}
+
+.project-image {
+    max-height: 400px;
+    height: 70%;
+}
+
+.project-card:hover {
+    transform: scale(1.01);
+}
+
+.project-thumbnail {
+    max-height: 300px;
+    width: 100%; /* Ensures the image takes full width of its column */
+    object-fit: cover; /* Maintains aspect ratio and crops if necessary */
+    border-radius: 8px;
+}

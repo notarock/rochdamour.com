@@ -19,8 +19,27 @@
 <!-- Links and other stuff -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+{{- /* Cache-busted CSS with fingerprinting */ -}}
+{{- with resources.Get "css/bootstrap.min.css" -}}
+  {{- if eq hugo.Environment "development" -}}
+    <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}" />
+  {{- else -}}
+    {{- with . | fingerprint -}}
+      <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with resources.Get "css/style.css" -}}
+  {{- if eq hugo.Environment "development" -}}
+    <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}" />
+  {{- else -}}
+    {{- with . | fingerprint -}}
+      <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 
 <!-- Font config -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
