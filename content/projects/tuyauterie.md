@@ -69,8 +69,7 @@ jobs:
       GITOPS_REPOSITORY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-Based on the configuration, Tuyauterie orchestrates multiple jobs as a directed
-acyclic graph, ensuring proper execution order and dependencies:
+Based on the configuration, Tuyauterie orchestrates multiple jobs:
 
 {{< center-image src="/projects/tuyauterie/graph.png" alt="Workflow execution graph showing job dependencies"  >}}
 
