@@ -12,12 +12,14 @@ tags:
   - Bot
 ---
 
+# The Idea
+
 Lately, I’ve been feeling nostalgic for the good old days of RSS feeds. You
 would subscribe to a feed, and all your favorite articles and news would
 magically show up in one place. It was simple and so effective!
 
 Now, tech news and interesting articles are scattered all over, and if I want to
-keep up, I have to jump between sites like Hacker News, Reddit, Lobste.rs and much more.
+keep up, I have to jump between sites like Hacker News, Reddit, Lobste.rs etc.
 
 I wanted a way to filter all that noise and pull in only the stuff that actually
 interests me. That’s when it hit me: why not make a bot that does this for me? I
