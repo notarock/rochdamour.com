@@ -148,3 +148,24 @@ link-icon:active {
     object-fit: cover; /* Maintains aspect ratio and crops if necessary */
     border-radius: 8px;
 }
+
+.emphasised-emoji {
+    background-color: #000000;
+    border-radius: 50%;
+    border: 6px solid #1b0d08;
+    padding: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    border: 6px solid #1b0d08;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    display: inline-block;
+}

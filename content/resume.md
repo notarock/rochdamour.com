@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: "About Me"
 layout: "resume"
-summary: "Roch's Resume, both in French and English."
+summary: "About Me"
 ---

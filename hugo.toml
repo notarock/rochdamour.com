@@ -13,7 +13,7 @@ pageRef = '/projects'
 weight = 30
 
 [[menus.main]]
-name = 'Resume'
+name = 'About Me'
 pageRef = '/resume'
 weight = 50
 

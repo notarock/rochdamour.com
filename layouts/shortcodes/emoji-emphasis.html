@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center gap-3">
+  {{ if .Get "left" }}
+  <span class="emphasised-emoji m-4" style="font-size: 4em;">{{ .Get "emoji" }}</span>
+  {{ end }}
+
+  <span>{{ .Get "text" }}</span>
+
+  {{ if .Get "right" }}
+  <span class="emphasised-emoji m-4" style="font-size: 4em;">{{ .Get "emoji" }}</span>
+  {{ end }}
+</div>
