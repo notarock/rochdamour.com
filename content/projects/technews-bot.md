@@ -9,7 +9,7 @@ params:
 tags:
   - Go
   - Discord
-  - Bot
+  - Chatbot
 ---
 
 # The Idea
