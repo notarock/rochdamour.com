@@ -1,52 +1,59 @@
 {{ define "main" }}
 
-<div id="home-jumbotron" class="jumbotron text-center mybg-dark">
-  <h1 class="title">About Me</h1>
+<div style="position: relative; overflow: hidden; width: 100%; margin: 0; padding: 0; display: block;">
+  <div class="animated-projects-box" style="position: absolute; width: 120%; height: 120%; top: -10%; left: -10%; z-index: 0;">
+  </div>
+  <div style="position: relative; z-index: 1;">
+    <div id="home-jumbotron" class="jumbotron text-center mybg-dark">
+      <h1 class="title">About Me</h1>
+    </div>
+
+    <div class="container mini-padding">
+      <div class="d-flex align-items-center gap-3 ">
+        <img src="https://github.com/notarock.png" alt="notarock profile" class="profile-picture m-4">
+        <span class="p-3 rounded" style="background-color: #1b0d08; border: 3px solid #2a1510;">I'm Roch D'Amour, aka <a href="https://github.com/notarock">notarock</a>. A Software Developer with a B. in Software Engineering from Quebec, Canada.</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 ">
+        <span class="p-3 rounded" style="background-color: #1b0d08; border: 3px solid #2a1510;">During the day, I work as a SRE (Site Reliability Expert) Dev, where I focus on all-things cloud infrastructure, automation, reliability and security. I have a strong passion for DevOps practices and love to improve systems and processes to make them more efficient and reliable.</span>
+        <span class="emphasised-emoji m-4" style="font-size: 4em;">🌤️</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 ">
+        <span class="emphasised-emoji m-4" style="font-size: 4em;">🌙</span>
+        <span class="p-3 rounded" style="background-color: #1b0d08; border: 3px solid #2a1510;">At night, I enjoy building personal projects, contributing to open-source, and exploring new technologies. Over time, I've built some fun and interresting projects and to support them, I run a server rack at home where I also do experiments with new toolings and practices.</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 ">
+        <span class="p-3 rounded" style="background-color: #1b0d08; border: 3px solid #2a1510;">​Outside of work, I love to play piano and listen to music of all kind. I have made significant progress in my musical journey and hope to continue improving.</span>
+        <span class="emphasised-emoji m-4" style="font-size: 4em;">🎹</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 ">
+        <span class="emphasised-emoji m-4" style="font-size: 4em;">🇨🇦</span>
+        <span class="p-3 rounded" style="background-color: #1b0d08; border: 3px solid #2a1510;">I mostly speak French (native) and English (fluent), but I also have a (very) basic understanding of Spanish.</span>
+      </div>
+
+      <div class="row d-flex justify-content-center align-items-center" style="gap: 1rem;">
+        <a
+          href="/files/Roch_Damour-CV-fr-2026.pdf"
+          class="col-md-3 col-sm-5 p-3 rounded mybg-clickable text-white hover-border d-flex align-items-center justify-content-center"
+          style="max-width: 250px; min-height: 60px;"
+        >
+          <h5 class="m-0">Resume (fr)</h5>
+        </a>
+
+        <a
+          href="/files/Roch_Damour-CV-en-2024.pdf"
+          class="col-md-3 col-sm-5 p-3 rounded mybg-clickable text-white hover-border d-flex align-items-center justify-content-center"
+          style="max-width: 250px; min-height: 60px;"
+        >
+          <h5 class="m-0">Resume (en)</h5>
+        </a>
+      </div>
+    </div>
+
+    <br /><br />
+  </div>
 </div>
-
-<div class="container mini-padding">
-  <div class="d-flex align-items-center gap-3 ">
-    <img src="https://github.com/notarock.png" alt="notarock profile" class="profile-picture m-4">
-    <span>I'm Roch D'Amour, aka <a href="https://github.com/notarock">notarock</a>. A Software Developer with a B. in Software Engineering from Quebec, Canada.</span>
-  </div>
-
-  <div class="d-flex align-items-center gap-3 ">
-    <span>During the day, I work as a SRE (Site Reliability Expert) Dev, where I focus on all-things cloud infrastructure, automation, reliability and security. I have a strong passion for DevOps practices and love to improve systems and processes to make them more efficient and reliable.</span>
-    <span class="emphasised-emoji m-4" style="font-size: 4em;">🌤️</span>
-  </div>
-
-  <div class="d-flex align-items-center gap-3 ">
-    <span class="emphasised-emoji m-4" style="font-size: 4em;">🌙</span>
-    <span>At night, I enjoy building personal projects, contributing to open-source, and exploring new technologies. Over time, I've built some fun and interresting projects and to support them, I run a server rack at home where I also do experiments with new toolings and practices.</span>
-  </div>
-
-  <div class="d-flex align-items-center gap-3 ">
-    <span>​Outside of work, I love to play piano and listen to music of all kind. I have made significant progress in my musical journey and hope to continue improving.</span>
-    <span class="emphasised-emoji m-4" style="font-size: 4em;">🎹</span>
-  </div>
-
-  <div class="d-flex align-items-center gap-3 ">
-    <span class="emphasised-emoji m-4" style="font-size: 4em;">🇨🇦</span>
-    <span>I mostly speak French (native) and English (fluent), but I also have a (very) basic understanding of Spanish.</span>
-  </div>
-
-  <div class="row d-flex justify-content-center align-items-center" style="gap: 1rem;">
-    <a
-      href="/files/Roch_Damour-CV-fr-2026.pdf"
-      class="col-md-3 col-sm-5 p-3 rounded mybg-clickable text-white hover-border d-flex align-items-center justify-content-center"
-      style="max-width: 250px; min-height: 60px;"
-    >
-      <h5 class="m-0">Resume (fr)</h5>
-    </a>
-
-    <a
-      href="/files/Roch_Damour-CV-en-2024.pdf"
-      class="col-md-3 col-sm-5 p-3 rounded mybg-clickable text-white hover-border d-flex align-items-center justify-content-center"
-      style="max-width: 250px; min-height: 60px;"
-    >
-      <h5 class="m-0">Resume (en)</h5>
-    </a>
-  </div>
-</div>
-
-<br /><br /> {{ end }}
+{{ end }}
