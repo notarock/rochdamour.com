@@ -14,6 +14,8 @@ body {
 
 header {
     flex-shrink: 0;
+    position: relative;
+    z-index: 100;
 }
 
 .page-wrapper {
@@ -30,6 +32,7 @@ header {
 
 main {
     flex: 1;
+    position: relative;
 }
 
 .container {
@@ -49,6 +52,8 @@ main .container .row {
 
 footer {
     flex-shrink: 0;
+    position: relative;
+    z-index: 100;
 }
 
 .dancing-text {

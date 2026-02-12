@@ -1,57 +1,63 @@
 {{ define "main" }}
-<div id="home-jumbotron" class="jumbotron text-center mybg-dark">
-  <h1 class="title">Things I do</h1>
-</div>
-
-<div class="container mini-padding mb-4">
-  <div class="row d-flex gx-3">
-    {{ range .Paginator.Pages }}
-    <a
-      href="{{ .Permalink }}"
-      class="col-12 py-1"
-    >
-      <div class="row p-3 rounded mybg-clickable text-white project-card hover-border">
-        <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
-          <img
-            class="rounded img-fluid project-thumbnail"
-            src="{{ .Params.image }}"
-            alt="{{ .Title }}"
-            style="max-width: 100%; height: auto;"
-          />
-        </div>
-        <div class="col-12 col-md-7 d-flex flex-column justify-content-center mt-3 mt-md-0">
-          <h2 class="mb-2">{{ .Title }}</h2>
-          <p class="mb-2">{{ .Summary }}</p>
-          <p class="text-muted small mb-0">
-            <i class="me-1" data-feather="calendar" style="width: 14px; height: 14px;"></i>
-            {{ .PublishDate.Format "Jan 2, 2006" }}
-          </p>
-        </div>
-        <div class="col-12 col-md-2 d-flex flex-column justify-content-center mt-3 mt-md-0">
-          <ul class="text-muted list-unstyled">
-            {{ with .Params.tags }}
-            {{ range . }}
-            {{ $href := print (absURL "tags/") (urlize .) }}
-            <li class="d-flex align-items-center mb-2">
-              <i class="m-1 p-1" data-feather="tag"></i>
-              {{ . }}
-            </li>
-            {{ end }}
-            {{ end }}
-          </ul>
-        </div>
-      </div>
-    </a>
-    {{ end }}
+<div style="position: relative; overflow: hidden; width: 100%; margin: 0; padding: 0; display: block;">
+  <div class="animated-projects-box" style="position: absolute; width: 120%; height: 150%; top: -10%; left: -10%; z-index: 0;">
   </div>
+  <div style="position: relative; z-index: 1;">
+    <div id="home-jumbotron" class="jumbotron text-center mybg-dark">
+      <h1 class="title">Things I do</h1>
+    </div>
 
-  <!-- Pagination links -->
-  <div class="pagination">
-    {{ if .Paginator.HasPrev }}
-    <a href="{{ .Paginator.Prev.URL }}">Previous</a>
-    {{ end }} {{ if .Paginator.HasNext }}
-    <a href="{{ .Paginator.Next.URL }}">Next</a>
-    {{ end }}
+    <div class="container mini-padding mb-4">
+      <div class="row d-flex gx-3">
+        {{ range .Paginator.Pages }}
+        <a
+          href="{{ .Permalink }}"
+          class="col-12 py-1"
+        >
+          <div class="row p-3 rounded mybg-clickable text-white project-card hover-border">
+            <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+              <img
+                class="rounded img-fluid project-thumbnail"
+                src="{{ .Params.image }}"
+                alt="{{ .Title }}"
+                style="max-width: 100%; height: auto;"
+              />
+            </div>
+            <div class="col-12 col-md-7 d-flex flex-column justify-content-center mt-3 mt-md-0">
+              <h2 class="mb-2">{{ .Title }}</h2>
+              <p class="mb-2">{{ .Summary }}</p>
+              <p class="text-muted small mb-0">
+                <i class="me-1" data-feather="calendar" style="width: 14px; height: 14px;"></i>
+                {{ .PublishDate.Format "Jan 2, 2006" }}
+              </p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column justify-content-center mt-3 mt-md-0">
+              <ul class="text-muted list-unstyled">
+                {{ with .Params.tags }}
+                {{ range . }}
+                {{ $href := print (absURL "tags/") (urlize .) }}
+                <li class="d-flex align-items-center mb-2">
+                  <i class="m-1 p-1" data-feather="tag"></i>
+                  {{ . }}
+                </li>
+                {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+
+      <!-- Pagination links -->
+      <div class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">Previous</a>
+        {{ end }} {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}">Next</a>
+        {{ end }}
+      </div>
+    </div>
   </div>
 </div>
 {{ end }}
