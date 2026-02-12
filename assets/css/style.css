@@ -122,11 +122,13 @@ link-icon:active {
 .hover-border {
     border: 1px solid #ff4500; /* Change the color */
     text-decoration: none; /* Optional: Underline on hover */
+    transition: transform 0.2s ease-in-out;
 }
 
 .hover-border:hover {
     border: 1px solid #FFC300; /* Change the color */
     text-decoration: none; /* Optional: Underline on hover */
+    transform: scaleX(1.02) scaleY(0.98);
 }
 
 .mybg-clickable {
@@ -138,8 +140,12 @@ link-icon:active {
     height: 70%;
 }
 
+.project-card {
+    transition: transform 0.2s ease-in-out;
+}
+
 .project-card:hover {
-    transform: scale(0.995);
+    transform: scaleX(1.02) scaleY(0.98);
 }
 
 .project-thumbnail {
