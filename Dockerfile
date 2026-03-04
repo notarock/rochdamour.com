@@ -10,7 +10,7 @@ RUN nix \
     --option filter-syscalls false \
     build
 
-FROM nginx:1.27
+FROM nginx:1.29
 COPY --from=builder /tmp/build/result /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
