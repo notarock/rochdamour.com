@@ -1,17 +1,20 @@
 {{ define "main" }}
 
 <div id="home-jumbotron" class="jumbotron text-center mybg-dark">
-  {{ if .Params.repository }}
-  <a
-    class="d-flex align-items-center justify-content-center"
-    href="{{ .Params.repository }}"
-  >
-    {{ end }}
-    <h1 class="title">{{ .Title }}</h1>
+  <h1 class="title">{{ .Title }}</h1>
+  {{ if or .Params.repository .Params.live }}
+  <div class="d-flex align-items-center justify-content-center">
     {{ if .Params.repository }}
-    <i class="m-2" data-feather="external-link"></i>
-  </a>
-
+    <a class="m-1 btn btn-sm hover-border d-flex align-items-center gap-1" href="{{ .Params.repository }}">
+      <i class="mr-1" data-feather="github"></i> View Repository
+    </a>
+    {{ end }}
+    {{ if .Params.live }}
+    <a class="m-1 btn btn-sm hover-border d-flex align-items-center gap-1" href="{{ .Params.live }}">
+      <i class="mr-1" data-feather="globe"></i> Visit Instance
+    </a>
+    {{ end }}
+  </div>
   {{ end }}
 
   <p class="lead">{{ .Summary}}</p>
