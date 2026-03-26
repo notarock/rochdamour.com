@@ -6,6 +6,7 @@ summary: 'A full-stack web app for tracking piano practice sessions and managing
 params:
   image: '/projects/pianoter/cover.png'
   repository: 'https://github.com/notarock/pianoter'
+  live: 'https://pianoter.notarock.lol'
 tags:
   - Go
   - React
