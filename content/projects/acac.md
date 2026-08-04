@@ -18,9 +18,11 @@ I'm currently hosting an instance of the bot and can add channels upon request! 
 If you're here by mistake, simply follow the link on the title of this page above to access the GitHub repo and open a hosting request!
 {{< /note >}}
 
-{{< note >}}
-A public Discord server for a_c_a_c is in the works. An accessible place for Hosting requests, sharing funny generated messages, discussing out of pocket messages and how to prevent them in the future... Coming soonish?
-{{< /note >}}
+## Community
+
+A public Discord server for a_c_a_c is now live! Join us for hosting requests, sharing funny generated messages, and discussing out of pocket messages.
+
+### [Join the Discord server](https://discord.gg/YjNAs9k9b8)
 
 ## The Idea
 
