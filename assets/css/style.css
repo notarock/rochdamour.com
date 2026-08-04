@@ -147,6 +147,45 @@ link-icon:active {
 
 .project-card {
     transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.slop-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.slop-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 0;
+    border-color: transparent #ff4500 transparent transparent;
+}
+
+.slop-badge span {
+    position: absolute;
+    top: 18px;
+    right: 4px;
+    width: 55px;
+    text-align: center;
+    font-size: 0.58rem;
+    font-weight: bold;
+    color: white;
+    transform: rotate(45deg);
+    line-height: 1.3;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .project-card:hover {

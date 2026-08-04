@@ -6,6 +6,7 @@ summary: 'A background agent harness that picks tasks from a checklist, hands th
 params:
   image: '/projects/strap/cover.png'
   repository: 'https://github.com/notarock/strap'
+  slop: 100
 tags:
   - Go
   - AI

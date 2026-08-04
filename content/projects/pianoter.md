@@ -7,6 +7,7 @@ params:
   image: '/projects/pianoter/cover.png'
   repository: 'https://github.com/notarock/pianoter'
   live: 'https://pianoter.notarock.lol'
+  slop: 75
 tags:
   - Go
   - React

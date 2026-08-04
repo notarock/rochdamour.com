@@ -15,6 +15,11 @@
           class="col-12 py-1"
         >
           <div class="row p-3 rounded mybg-clickable text-white project-card hover-border">
+            {{ if .Params.slop }}
+            <div class="slop-badge">
+              <span>{{ .Params.slop }}%<br>AI Slop</span>
+            </div>
+            {{ end }}
             <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
               <img
                 class="rounded img-fluid project-thumbnail"
