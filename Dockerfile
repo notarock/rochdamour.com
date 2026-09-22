@@ -1,4 +1,4 @@
-FROM nixos/nix:2.34.7 AS builder
+FROM nixos/nix:2.35.2 AS builder
 
 # Copy our source and setup our working dir.
 COPY . /tmp/build
@@ -10,7 +10,7 @@ RUN nix \
     --option filter-syscalls false \
     build
 
-FROM nginx:1.30
+FROM nginx:1.31
 COPY --from=builder /tmp/build/result /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
