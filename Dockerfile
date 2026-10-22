@@ -1,4 +1,4 @@
-FROM nixos/nix:2.35.2 AS builder
+FROM nixos/nix:2.35.4 AS builder
 
 # Copy our source and setup our working dir.
 COPY . /tmp/build
